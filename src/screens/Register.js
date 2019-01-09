@@ -23,7 +23,7 @@ class Register extends Component{
            email,
            password
        }
-       axios.post("http://rest.learncode.academy/api/ganar/user",data).then(res=>{
+       axios.post("c",data).then(res=>{
             console.log(res);
        })
     }
@@ -33,9 +33,9 @@ class Register extends Component{
     render(){
         return(
             <div>
-            <input placeholder="Name" onChange={this.handleChange} value={this.state.name} name="name" ></input>
-            <input placeholder="Email" onChange={this.handleChange} value={this.state.email} name="email"></input>
-            <input placeholder="Password" onChange={this.handleChange} value={this.state.password} name="password"></input>
+            <input type="text" placeholder="Name" onChange={this.handleChange} value={this.state.name} name="name" ></input>
+            <input type="email" placeholder="Email" onChange={this.handleChange} value={this.state.email} name="email"></input>
+            <input type="password" placeholder="Password" onChange={this.handleChange} value={this.state.password} name="password"></input>
             <button onClick={this.handleRegister} >Register</button>
             </div>
         );

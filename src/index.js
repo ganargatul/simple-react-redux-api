@@ -10,6 +10,8 @@ import userReducer from './reducers/userReducer'
 import store from './store'
 import News from './containers/News';
 import Register from './screens/Register'
+import Linkedin from './screens/Linkedin';
+import Callback from './screens/Callback';
 import {
 	BrowserRouter as Router,
 	Route,
@@ -20,8 +22,10 @@ import {
 ReactDOM.render(
     <Router>
         <Provider store={store}>
-           <Route exact path="/" component={News} />
+           <Route exact path="/" component={Callback} />
            <Route exact path="/register" component={Register} />
+           <Route exact path="/linked" component={Linkedin} />
+           <Route exact path="/Callback" component={News} />
         </Provider>
     </Router>
    
